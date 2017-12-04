@@ -3,6 +3,10 @@ package com.sleep.codewars;
 import java.util.Arrays;
 
 /**
+ *
+ * Created by sleep on 2017/12/4
+ * sleepym09@163.com
+ * 
  * In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
  *
  * Example:
