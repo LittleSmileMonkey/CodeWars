@@ -21,7 +21,7 @@ public class TreeNode {
      */
     public TreeNode right;
 
-    TreeNode(int x) {
+    public TreeNode(int x) {
         val = x;
     }
 }
