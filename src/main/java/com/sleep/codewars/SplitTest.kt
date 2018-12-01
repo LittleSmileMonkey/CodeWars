@@ -11,7 +11,7 @@ import kotlin.test.assertEquals
 fun main(args: Array<String>) {
     val split = "/123456/78945/13254/1252".split("/")
     val size = split.size
-    assertEquals(size,4)
+    assertEquals(size,5)
 }
 
 class SplitTest {

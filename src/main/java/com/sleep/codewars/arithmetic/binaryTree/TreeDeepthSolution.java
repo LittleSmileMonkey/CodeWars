@@ -32,7 +32,7 @@ public class TreeDeepthSolution {
             return 0;
 
         TreeNode current = null;
-        LinkedList<TreeNode> queue = new LinkedList<>();
+        LinkedList<TreeNode> queue = new LinkedList();
         queue.offer(root);
         int cur,last;
         int level = 0;
