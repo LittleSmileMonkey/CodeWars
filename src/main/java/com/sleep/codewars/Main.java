@@ -15,7 +15,7 @@ public class Main {
             Date parse = simpleDateFormat.parse("2019-05-08T09:30:00.000Z");
             Calendar instance = Calendar.getInstance();
             instance.setTime(parse);
-//            instance.setTimeZone(TimeZone.getTimeZone("GMT+8"));
+            instance.setTimeZone(TimeZone.getTimeZone("GMT+8"));
             System.out.println("year = " + instance.get(Calendar.YEAR));
             System.out.println("month = " + (instance.get(Calendar.MONTH)+1));
             System.out.println("day = " + instance.get(Calendar.DAY_OF_MONTH));
