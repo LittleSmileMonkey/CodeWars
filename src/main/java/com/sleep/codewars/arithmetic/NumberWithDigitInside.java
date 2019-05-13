@@ -1,4 +1,4 @@
-package com.sleep.codewars;
+package com.sleep.codewars.arithmetic;
 
 import java.util.ArrayList;
 import java.util.Arrays;

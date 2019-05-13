@@ -1,4 +1,4 @@
-package com.sleep.codewars.arithmetic;
+package com.sleep.codewars.structure;
 
 /**
  * Created by Sleep on 2018/6/12.

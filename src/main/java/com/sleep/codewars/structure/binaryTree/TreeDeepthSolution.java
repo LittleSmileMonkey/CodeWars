@@ -1,6 +1,6 @@
-package com.sleep.codewars.arithmetic.binaryTree;
+package com.sleep.codewars.structure.binaryTree;
 
-import com.sleep.codewars.arithmetic.TreeNode;
+import com.sleep.codewars.structure.TreeNode;
 
 import java.util.LinkedList;
 

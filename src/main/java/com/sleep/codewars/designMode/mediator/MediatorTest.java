@@ -1,15 +1,9 @@
-package com.sleep.codewars.designMode;
-
-import com.sleep.codewars.designMode.mediator.AbstractMediator;
-import com.sleep.codewars.designMode.mediator.Defense;
-import com.sleep.codewars.designMode.mediator.Department;
-import com.sleep.codewars.designMode.mediator.Mediator;
-import com.sleep.codewars.designMode.mediator.Ministry;
+package com.sleep.codewars.designMode.mediator;
 
 /**
  * DesignMode Test Class
  */
-class DesignModeTest {
+class MediatorTest {
     public static void main(String[] args) {
         AbstractMediator abstractMediator=new Mediator();
         //发生天灾了，户部麻烦了，需要解决问题
