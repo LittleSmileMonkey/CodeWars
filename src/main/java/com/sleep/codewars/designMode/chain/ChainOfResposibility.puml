@@ -1,0 +1,17 @@
+@startuml
+abstract class AbstractOperation{
+    - Handler nextOperation
+    + void startNextOperation(Object param)
+    __ abstract method __
+    + {abstract} void setNextOperation(Object param)
+
+}
+class ConcreteOperationA
+class ConcreteOperationB
+class Client
+
+AbstractOperation --|> AbstractOperation
+Client .left.* AbstractOperation
+ConcreteOperationA -up-|> AbstractOperation
+ConcreteOperationB -up-|> AbstractOperation
+@enduml
