@@ -1,6 +1,6 @@
 package com.sleep.codewars.structure.binaryTree;
 
-import com.sleep.codewars.structure.TreeNode;
+import com.sleep.codewars.structure.bean.TreeNode;
 
 /**
  * Created by Sleep on 2018/6/25.

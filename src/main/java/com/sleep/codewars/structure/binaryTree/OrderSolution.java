@@ -1,6 +1,6 @@
 package com.sleep.codewars.structure.binaryTree;
 
-import com.sleep.codewars.structure.TreeNode;
+import com.sleep.codewars.structure.bean.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.sleep.codewars.structure;
+package com.sleep.codewars.structure.bean;
 
 /**
  * Created by Sleep on 2018/6/12.
