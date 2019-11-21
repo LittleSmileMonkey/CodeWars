@@ -1,5 +1,9 @@
 package com.sleep.codewars.arithmetic.day01;
 
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
+
 /**
  * author：xingkong on 2019/11/19
  * e-mail：xingkong@changjinglu.net
@@ -12,7 +16,47 @@ package com.sleep.codewars.arithmetic.day01;
  */
 class OpenLock {
     public int openLock(String[] deadends, String target) {
-        int result = -1;
-        return result;
+        //将deadends添加至set
+        Set<String> dead = new HashSet();
+        for (String d : deadends) dead.add(d);
+
+        //队列，从0000开始搜索
+        LinkedList<String> queue = new LinkedList<>();
+        queue.offer("0000");
+        queue.offer(null);
+
+        //已经遍历过的数据
+        HashSet<String> seen = new HashSet<>();
+        seen.add("0000");
+
+        //搜索路径长度
+        int depth = 0;
+        while (!queue.isEmpty()) {
+            String node = queue.poll();
+            if (node == null) {
+                //null标志一层路径遍历完
+                depth++;
+                if (queue.peek() != null) {
+                    queue.offer(null);
+                }
+            } else if (target.equals(node)) {
+                //匹配成功
+                return depth;
+            } else if (!dead.contains(node)) {
+                //不在死亡数字列表中
+                for (int i = 0; i < 4; i++) {
+                    for (int d = -1; d <= 1; d += 2) {
+                        //加减1
+                        int posNum = ((node.charAt(i) - '0') + d + 10) % 10;
+                        String nei = node.substring(0, i) + ("" + posNum) + node.substring(i + 1);
+                        if (!seen.contains(nei)) {
+                            seen.add(nei);
+                            queue.offer(nei);
+                        }
+                    }
+                }
+            }
+        }
+        return -1;
     }
 }
