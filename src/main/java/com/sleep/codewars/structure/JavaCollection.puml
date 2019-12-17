@@ -1,0 +1,69 @@
+@startuml
+
+'接口的定义'
+interface Iterable
+interface Collection
+interface List
+interface Set
+interface Map
+interface Queue
+interface BlockingQueue
+interface DeQueue
+interface BlockingDeQueue
+
+'abs 的定义'
+abstract class AbstractCollection
+abstract class AbstractList
+    class ArrayList
+    class Vector
+        class Stack
+abstract class AbstractSequentialList
+    class LinkedList
+abstract class AbstractSet
+    class TreeSet
+    class HashSet
+        class LinkedHashSet
+    abstract class EnumSet
+        class JumboEnumSet
+        class RegularEnumSet
+abstract class AbstractMap
+abstract class AbstractQueue
+
+'接口继承关系'
+Collection <|-- List
+Collection <|-- Set
+Collection <|-- Queue
+Queue <|-- DeQueue
+DeQueue <|-- BlockingQueue
+
+'接口实现关系'
+Collection <|.. AbstractCollection
+Iterable <|.. Collection
+List <|.. AbstractList
+Set <|.. AbstractSet
+Queue <|.. AbstractQueue
+Map <|.. AbstractMap
+
+'List'
+AbstractList <|-- AbstractSequentialList
+    AbstractSequentialList <|-- LinkedList
+AbstractList <|-- ArrayList
+AbstractList <|-- Vector
+        note left of Vector
+        废弃
+        end note
+    Vector <|-- Stack
+        note left of Stack
+        废弃
+        end note
+
+'Set'
+AbstractSet <|-- TreeSet
+AbstractSet <|-- HashSet
+    HashSet <|-- LinkedHashSet
+AbstractSet <|-- EnumSet
+    EnumSet <|-- JumboEnumSet
+    EnumSet <|-- RegularEnumSet
+
+'Queue'
+@enduml
