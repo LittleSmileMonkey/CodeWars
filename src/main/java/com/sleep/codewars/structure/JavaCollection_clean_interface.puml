@@ -2,14 +2,10 @@
 
 together {
     '接口的定义'
-    interface Iterable
     interface Collection
     interface List
     interface Set
     interface Queue
-    interface BlockingQueue
-    interface DeQueue
-    interface BlockingDeQueue
 
     'abs 的定义'
     abstract class AbstractCollection
@@ -41,10 +37,6 @@ together {
     Collection <|-- List
     Collection <|-- Set
     Collection <|-- Queue
-    Queue <|-- DeQueue
-    Queue <|-- BlockingQueue
-    BlockingQueue <|-- BlockingDeQueue
-    DeQueue <|-- BlockingDeQueue
 
     '接口实现关系'
     Collection <|.. AbstractCollection
@@ -81,20 +73,13 @@ together {
     'Queue'
     AbstractCollection <|-- AbstractQueue
     AbstractQueue <|-- SynchronousQueue
-    BlockingQueue <|.. SynchronousQueue
     AbstractQueue <|-- PriorityQueue
     AbstractQueue <|-- LinkedBlockingQueue
-    BlockingQueue <|.. LinkedBlockingQueue
     AbstractQueue <|-- PriorityBlockingQueue
-    BlockingQueue <|.. PriorityBlockingQueue
     AbstractQueue <|-- ArrayBlockingQueue
-    BlockingQueue <|.. ArrayBlockingQueue
     AbstractQueue <|-- DelayQueue
-    BlockingQueue <|.. DelayQueue
     AbstractQueue <|-- LinkedBlockingDeque
-    BlockingDeQueue <|.. LinkedBlockingDeque
     AbstractQueue <|-- ConcurrentLinkedQueue
-    Queue <|.. ConcurrentLinkedQueue
 }
 
 together {
