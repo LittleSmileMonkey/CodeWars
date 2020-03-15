@@ -14,7 +14,13 @@ class InsertionSort {
         System.out.println(Arrays.toString(testCase));
     }
 
-    private static void insertionSort(int[] array){
-
+    private static void insertionSort(int[] array) {
+        for (int i = 1, j, current; i < array.length; i++) {
+            current = array[i];
+            for (j = i - 1; j >= 0 && array[j] > current; j--) {
+                array[j+1] = array[j];
+            }
+            array[j+1] = current;
+        }
     }
 }

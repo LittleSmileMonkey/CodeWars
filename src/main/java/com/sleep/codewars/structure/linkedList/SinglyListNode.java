@@ -6,8 +6,8 @@ package com.sleep.codewars.structure.linkedList;
  *
  * 单链表经典结构
  */
-class SinglyListNode {
-    int val;
-    SinglyListNode next;
-    SinglyListNode(int x) { val = x; }
+public class SinglyListNode {
+    public int val;
+    public SinglyListNode next;
+    public SinglyListNode(int x) { val = x; }
 }
