@@ -2,6 +2,9 @@ package com.sleep.codewars.arithmetic.day02;
 
 import com.sleep.codewars.structure.linkedList.SinglyListNode;
 
+import java.util.ArrayList;
+import java.util.Comparator;
+
 /**
  * author：xingkong on 2020/3/15
  * e-mail：xingkong@changjinglu.net
@@ -22,6 +25,13 @@ class ListNodeInsertionSort {
             System.out.print(current.val +" ");
             current = current.next;
         }
+        ArrayList<String> strings = new ArrayList<>();
+        strings.sort(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 0;
+            }
+        });
         System.out.println("");
     }
 
