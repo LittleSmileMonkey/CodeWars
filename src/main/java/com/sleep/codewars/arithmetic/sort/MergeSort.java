@@ -45,23 +45,25 @@ class MergeSort {
     private static void mergeSort2(int[] array, int low, int high) {
         if (low >= high) return;
         int mid = low + (high - low) / 2;
+
         mergeSort2(array, low, mid);
         mergeSort2(array, mid + 1, high);
         merge2(array, low, mid, high);
     }
 
     private static void merge2(int[] array, int low, int mid, int high) {
-        int[] copy = array.clone();
-        int k = low, i = low, j = mid + 1;
-        while (k <= high) {
-            if (i > mid) {
-                array[k++] = copy[j++];
-            } else if (j > high) {
-                array[k++] = copy[i++];
-            } else if (copy[i] > copy[j]) {
-                array[k++] = copy[j++];
-            } else {
-                array[k++] = copy[i++];
+        int[] clone = array.clone();
+
+        int i = low, j = low, k = mid + 1;
+        while (i <= high) {
+            if (j > mid) {
+                array[i++] = clone[k++];
+            } else if (k > high) {
+                array[i++] = clone[j++];
+            } else if (clone[j] > clone[k]) {
+                array[i++] = clone[k++];
+            }else {
+                array[i++] = clone[j++];
             }
         }
     }
