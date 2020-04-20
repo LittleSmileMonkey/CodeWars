@@ -41,10 +41,11 @@ class QuickSort {
     }
 
     private static int partition2(int[] array, int low, int high) {
+        //随机选取数值交换至最高位
         swap(array, low + (high - low) / 2, high);
         int i, j;
         for (i = low, j = low; j < high; j++) {
-            if (array[j] < array[high]) {
+            if (array[j] <= array[high]) {
                 swap(array, i++, j);
             }
         }

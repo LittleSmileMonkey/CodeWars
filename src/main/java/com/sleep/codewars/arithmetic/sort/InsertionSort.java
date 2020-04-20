@@ -26,13 +26,12 @@ class InsertionSort {
 
     private static void insertionSort2(int[] array) {
         if (array == null || array.length < 2) return;
-
         for (int i = 1, j, current; i < array.length; i++) {
             current = array[i];
             for (j = i - 1; j >= 0 && array[j] > current; j--) {
-                array[j + 1] = array[j];
+                array[j+1] = array[j];
             }
-            array[j + 1] = current;
+            array[j+1] = current;
         }
     }
 }
