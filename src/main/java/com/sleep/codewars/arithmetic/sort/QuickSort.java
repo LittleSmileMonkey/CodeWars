@@ -34,23 +34,10 @@ class QuickSort {
 //    }
 
     private static void quickSort2(int[] array, int low, int high) {
-        if (low >= high) return;
-        int partition = partition2(array, low, high);
-        quickSort2(array, low, partition - 1);
-        quickSort2(array, partition + 1, high);
     }
 
     private static int partition2(int[] array, int low, int high) {
-        //随机选取数值交换至最高位
-        swap(array, low + (high - low) / 2, high);
-        int i, j;
-        for (i = low, j = low; j < high; j++) {
-            if (array[j] <= array[high]) {
-                swap(array, i++, j);
-            }
-        }
-        swap(array, i, high);
-        return i;
+        return 0;
     }
 
     private static void swap(int[] array, int i, int j) {
