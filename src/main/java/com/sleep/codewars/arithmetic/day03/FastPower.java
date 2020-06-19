@@ -7,7 +7,7 @@ package com.sleep.codewars.arithmetic.day03;
 class FastPower {
     public static void main(String[] args) {
         //2^4 % 5
-        int i = fastPower(2, 5, 4);
+        int i = fastPower(2, 5, 3);
         System.out.println("i = " + i);
     }
 
@@ -17,7 +17,7 @@ class FastPower {
         // a*b % p = (a % p * b % p) % p;
         // a^n % b = (a^(n/2) % b * a^(n/2) %b) % b
         int halfPower = fastPower(a, b, n / 2);
-        halfPower = (halfPower * halfPower) % b;
+        halfPower = ((halfPower % b) * (halfPower % b)) % b;
         if (n % 2 == 1) {
             halfPower = ((a % b) * halfPower) % b;
         }
